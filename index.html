@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="form-container " id="addStudentForm">
+    <div class="text-container">
+      <h1>Add Student</h1> 
+           <a class="btn3" href="Upload.html" >Login</a>
+    
+    </div>
+  <form id="studentForm">
+      <div class="form-group">
+        <input type="text" id="firstName" name="firstName" placeholder="FullName" required>
+      </div>
+      
+      <div class="form-group">
+       
+        <input type="text" id="lastName" name="lastName" placeholder="LastName" required>
+      </div>
+
+      <div class="form-group">
+
+        <input type="email" id="email" name="email"  placeholder="Email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="password" name="password"  placeholder="Password" required>
+      </div>
+
+      <div class="form-group">
+       
+        <input type="text" id="cnic" name="cnic" placeholder="CNIC" required>
+      </div>
+
+      <div class="form-group">
+        <select type="text" id="userType" name="userType" placeholder="userType" required>
+          <option value="Matric">Matric</option>
+          <option value="Inter">Intermidate</option>
+          <option value="gradue">Graduation</option>
+          <option value="Ungradue">Ungraduation</option>
+          <option value="Student">Univrsity</option>
+        </select>
+      </div>
+      <button type="submit" >Add Student</button>
+    </form>
+  </div>
+
+  
+  <div class="Upload-container" id="uploadMarksForm" style="display:none";>
+  <div class="text-container">
+    <h1 class="Uph1">Upload Student Marks</h1>
+    <button class="btn2" id="findResultBtn">Find Result</button>
+    </div>
+    <br/><br/><br/><br/>
+    <form id="marksForm">
+      <div class="form-group">
+        <select type="text" id="course"  class="course" name="course" placeholder="Course" required>
+         <option value="Web and App">Web and App Development</option>
+         <option value="Python">Python</option>
+         <option value="Ai">Ai ChatBot</option>
+         <option value="Graphic">Graphic Designing</option>
+        </select>
+
+      <div class="form-group">
+        <input type="text" id="studentId" name="studentId" placeholder="Student ID" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" id="marks" name="marks" placeholder="Marks Obtained" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" id="totalMarks" name="totalMarks" placeholder="Total Marks" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="grade" name="grade" placeholder="Grade" required>
+      </div>
+
+      <button type="submit">Upload Marks</button>
+    </form>
+  </div>
+  <div  id="findResultForm" style="display: none;">
+    <div id="editProfileForm">
+     <h1>Edit Profile</h1>
+     <form id="profileForm">
+       <input type="text" id="firstName"  name="firstName" class="inputthree" placeholder="First Name" required>
+       <input type="text" id="lastName" name="lastName" class="inputthree" placeholder="Last Name" required>
+       <input type="text" id="cnic" name="cnic" class="inputthree" placeholder="CNIC" required>
+      <br/><br/>
+       <button type="submit">Update Profile</button>
+     </form>
+     <div id="updateMessage" style="display:none;">
+       <h2>Profile updated successfully!</h2>
+     </div>
+   </div>
+   <br/><br/><br/>
+   <div   id="findResultForm" style="display: none;"></div>
+     <h1>Find Result</h1>
+     <form id="resultForm">
+       <input type="text" id="cnicFind" name="cnic" class="inputthree" placeholder="Enter CNIC" required>
+       <br/><br/>
+       <button type="submit">Find Result</button>
+     </form>
+     <div id="resultDisplay"  style="display:none;">
+       <h3 class="resultData">Result :</h3>
+       <p id="resultData" class="resultData"></p>
+     </div>
+   </div>
+ </div>
+  <script src="script.js"></script>
+</body>
+</html>

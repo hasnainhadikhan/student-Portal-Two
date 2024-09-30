@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+<style>
+.login-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d0909;
+}
+
+
+.form {
+  background: #333030;
+  padding: 40px;
+  max-width: 400px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.heading1 {
+  margin-bottom: 20px;
+  font-size: 64px;
+  color:#063488;
+  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+
+#logininput[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+#logininput[type="text"]:focus, input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.btn2{
+    width: 25%;
+    background-color: rgb(0, 0, 207);
+    color: white;
+    padding: 11px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
+    border-radius: 10px;
+    transition: all 0.5s;
+    border: 2px solid rgb(0, 0, 207);
+    cursor: pointer;
+}
+ .btn2:hover{
+    background-color:transparent;
+    color: rgb(0, 0, 207);
+    transition: all 0.5s;
+}
+
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.message a {
+  color: #007bff;
+  text-decoration: none;
+}
+</style>
+<body>
+    
+    <form class="register-form" style="background-color: rgb(255, 255, 255); width: 600px; height: 400px; border-radius: 12px;">
+       <h1>Login Form</h1>
+        <input id="emailInput" type="text" placeholder="Email" style="width: 500px; margin-left: 50px;"/>
+        <input id="passwordInput" type="password" placeholder="Password" style="width: 500px; margin-left: 50px;"/>
+        <button class='btn'>Login</button>
+        <p class="message" style="text-align: center; font-size: 24px;">Already registered ? <a href="index.html"> Login Here</a></p>
+    </form>
+    
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+import {
+	getAuth,
+	signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+const firebaseConfig =  {
+  apiKey: "AIzaSyALcydsuW2piC34gGRsjt69H_0b0Ohmpx8",
+  authDomain: "authentication-test-2e124.firebaseapp.com",
+  projectId: "authentication-test-2e124",
+  storageBucket: "authentication-test-2e124.appspot.com",
+  messagingSenderId: "991399458655",
+  appId: "1:991399458655:web:6c0bb3956f20cd823d28ea",
+  measurementId: "G-TPTJ4X9G29"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.querySelector('.register-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Get email and password from the input fields
+  const email = document.getElementById('emailInput').value;
+  const password = document.getElementById('passwordInput').value;
+ 
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in successfully
+      const user = userCredential.user;
+      alert('Login Successful!');
+
+    })
+    .catch((error) => {
+      
+      const errorMessage = error.message;
+      alert(`Error: ${errorMessage}`);
+    });
+});
+
+</script>
+    </body>
+</html>

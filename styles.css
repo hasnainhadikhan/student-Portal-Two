@@ -1,0 +1,221 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 97vh;
+    background-color: rgb(238, 238, 238);
+}
+.form-container{
+    box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1),0px 6px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 1%;
+    padding-bottom: 2.7%;
+    width: 60%;
+}
+
+.Upload-container{
+    box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1),0px 6px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 1%;
+    padding-bottom: 2.7%;
+    width: 60%;
+}
+  .form-group {
+    margin-bottom: 20px; /* Adds space between input fields */
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 90%;
+    margin-left: 5%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+.HeaderDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+ h1{
+    color: rgb(0, 0, 41);
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 800;
+    text-align: start;
+    margin-left: 10%;
+    font-size: 42px;
+    margin-top: 3px;
+}
+
+.signoutBtnDiv{
+    width: 50%;
+    text-align: end;
+}
+ button{
+   
+    width: 75%;
+    background-color: rgb(0, 0, 207);
+    color: white;
+    padding: 11px;
+    font-size: 18px; 
+     font-family: "Mochiy Pop One", sans-serif;
+    font-weight: bold;
+    margin-left: 12%;
+    border-radius: 10px;
+    transition: all 0.5s;
+    border: 2px solid rgb(0, 0, 207);
+    cursor: pointer;
+}
+ button:hover{
+    background-color:transparent;
+    color: rgb(0, 0, 207);
+    transition: all 0.5s;
+}
+
+.allInfoDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+input{
+    width: 100%;
+    border: 2px solid lightgray;
+    background-color: rgb(251, 251, 251);
+    padding: 15px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    border-radius: 8px;
+    margin-bottom: 1%;
+    
+    transition: all 0.5s;
+}
+#userType{
+    border: 2px solid lightgray;
+    background-color: rgb(251, 251, 251);
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    border-radius: 8px;
+    margin-bottom: 3%;
+    color: rgb(117, 117, 117);
+    transition: all 0.5s;
+}
+#userType:hover{
+    border: 2px solid rgb(0, 0, 207) ;
+    border-color: rgb(0, 0, 207);
+    transition: all 0.5s;
+}
+input:hover{
+    border: 2px solid rgb(0, 0, 207) ;
+    border-color: rgb(0, 0, 207);
+    transition: all 0.5s;
+}
+.Uph1{
+   margin-top: 20px;
+   font-size: 34px;
+}
+.course{
+    border: 2px solid lightgray;
+    background-color: rgb(251, 251, 251);
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    border-radius: 8px;
+    margin-bottom: 3%;
+    color: rgb(117, 117, 117);
+    transition: all 0.5s;
+    margin-top: -20px;
+}
+.text-container{
+  display: flex;
+  align-items: center;
+}
+.btn2{
+    width: 25%;
+    background-color: rgb(0, 0, 207);
+    color: white;
+    padding: 11px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
+    border-radius: 10px;
+    transition: all 0.5s;
+    border: 2px solid rgb(0, 0, 207);
+    cursor: pointer;
+}
+ .btn2:hover{
+    background-color:transparent;
+    color: rgb(0, 0, 207);
+    transition: all 0.5s;
+}
+.btn3{
+    width: 15%;
+    text-align: center;
+    background-color: rgb(0, 0, 207);
+    color: white;
+    padding: 11px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 25%;
+    font-family:  "Mochiy Pop One", sans-serif;
+    border-radius: 10px;
+    transition: all 0.5s;
+    border: 2px solid rgb(0, 0, 207);
+    cursor: pointer;
+}
+ .btn3:hover{
+    background-color:transparent;
+    color: rgb(0, 0, 207);
+    transition: all 0.5s;
+}
+
+.inputtwo{
+   width: 700px;
+   margin-left: 7%;
+}
+.resultData{
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 24px;
+   margin-left: 25%;
+}
+h2{
+    
+        color: rgb(0, 0, 41);
+        font-family: "Mochiy Pop One", sans-serif;
+        font-weight: 800;
+        text-align: center; 
+        font-size: 32px;
+        margin-top: 13px;
+    }
+
+    .inputthree{
+        width: 700px;
+        margin-left: 7%;
+     }
+     message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+      
+      .message a {
+        color: #007bff;
+        text-decoration: none;
+      }
